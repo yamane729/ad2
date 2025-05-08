@@ -1,0 +1,54 @@
+@charset "UTF-8";
+body {
+    background-color: #ffffff; /* 明るい背景色 */
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #e0f7fa; /* 明るい沖縄風の色 */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border: 5px solid #00796b;
+}
+h1 {
+    text-align: center;
+    color: #00796b;
+    font-family: 'Pacifico', cursive;
+}
+dt {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #004d40;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #00796b;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #004d40;
+}
+p {
+    background-color: #00796b;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 12%;
+    font-size: 16px;
+}
+p:hover {
+    background-color: #004d40;
+}

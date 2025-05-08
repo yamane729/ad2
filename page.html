@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/shiisa_one.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ham.css">
+    <link rel="stylesheet" href="css/page.css">
+    <title>沖縄観光 お申し込み</title>
+    <style>
+        .hidden {
+          display: none;
+        }
+    </style>
+</head>
+
+<body>
+    
+<!-- ヘッダー -->
+<header class="header">
+    <nav class="nav nav1">
+      <ul>
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="index.html#osirase">お知らせ</li>
+        <li><a href="schedule.html">旅行プラン</a></li>
+        <li><a href="page.html">お申し込み</a></li>
+        <li><a href="form.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!-- ハンバーガーメニュー -->
+  <input type="checkbox" id="hambuger">
+    <label for="hambuger">
+      <span class="buger">
+        <span class="bar"></span>
+      </span>
+    </label>
+  <label class="light-dark" for="hambuger"></label>
+  <div id="menu">
+    <a href="index.html">トップ</a>
+    <a href="index.html#osirase">お知らせ</a>
+    <a href="schedule.html">旅行プラン</a>
+    <a href="page.html">お申し込み</a>
+    <a href="form.html">お問い合わせ</a>
+  </div>
+
+
+    <form method="POST" action="transmission.html" id="myform" >
+    
+            <section class="naiyou">
+                <h1>お申し込み</h1>
+
+            <div class="jyouhou">
+                    <h4>※下記の項目に沿って情報をご入力ください。</h4>
+                    
+
+                <label for="preferredDateTime">出発日</label>
+                    <input type="date" name="日付" class="formtext1" required><br><br>
+
+                <label for="preferredDateTime">参加人数</label>
+                大人：<input type="number" id="attendees" name="attendees" min="1" required class="formtext2">名
+
+                小人：<input type="number" id="attendees" name="attendees" min="1" required class="formtext2">名
+
+                幼児：<input type="number" id="attendees" name="attendees" min="1" required class="formtext2">名<br><br>
+
+                <label for="preferredDateTime">代表情報</label>
+                お名前<input type="text" id="name" name="name" placeholder="例）山田　太郎" required class="formtext3">
+                
+                お名前(カタカナ)<input type="text" id="nickname" name="nickname" placeholder="例）ヤマダ　タロウ" required class="formtext3"><br><br>
+
+                <label for="phone">電話番号</label>
+                    <input type="tel" id="phone" name="phone" placeholder="例）012-3456-7890" required class="formtext1"><br><br>
+
+                <label for="phone">メールアドレス</label>
+                    <input type="email" id="email" name="email" placeholder="例）example@example.com" required class="formtext1"><br><br>
+
+
+                    <!--支払方法選択-->
+                    <label for="paymentMethod">お支払い方法</label>
+                    <select id="select" required class="formtext4">
+                        <option value="0">※選択してください。</option>
+                        <option value="1">クレジットカード決済</option>
+                        <option value="2">口座振込み</option>
+                        <option value="3">来店支払い</option>
+                    </select><br><br>
+
+                    <!--クレカ-->
+                    <div id="message1" class="hidden">
+                        <h3 for="preferredDateTime" class="midasi">クレジットカード決済</h3><br><br>
+                          <label for="card_name">カード名義</label>
+                            お名前<input type="text" id="name" name="name" placeholder="例）山田　太郎" required class="formtext3">
+                    
+                            お名前(カタカナ)<input type="text" id="nickname" name="nickname" placeholder="例）ヤマダ　タロウ" required class="formtext3"><br><br>
+                    
+                          <label for="cc-number">カード番号</label>
+                              <input type="text" id="cc-number" name="cc-number" inputmode="numeric" pattern="\d{14,16}" title="14〜16桁の番号を入力してください" autocomplete="cc-number" required class="formtext1"> <br><br>
+                                  
+                          <label for="cc-exp">有効期限</label>
+                              <input type="date" id="cc-exp" name="cc-exp" pattern="\d{2}/\d{2}" title="MM/YY形式で入力してください" autocomplete="cc-exp" required class="formtext1"><br><br>
+                                  
+                          <label for="cc-cvc">セキュリティコード</label>
+                              <input type="text" id="cc-cvc" name="cc-cvc" pattern="\d{3,4}" title="3〜4桁の番号を入力してください" autocomplete="cc-csc" required class="formtext1">
+                              <br><br>
+                        
+                    </div>
+
+
+                    <!--振込-->
+                    <div id="message2" class="hidden">
+                        <h3 class="midasi">口座振り込み</h3><br>
+                            <label for="bank">金融機関名</label>
+                                <input type="text" id="bank" name="bank" required class="formtext1"><br><br>
+
+                            <label for="branch-name">支店名</label>
+                                <input type="text" id="branch-name" name="branch-name" required class="formtext1"><br><br>
+
+                            <label for="account-type">預金種目</label>
+                                <select id="account-type" name="account-type" required class="formtext4">
+                                <option value="普通">普通</option>
+                                <option value="当座">当座</option>
+                                </select><br><br>
+
+                            <label for="account-number">口座番号</label>
+                                <input type="text" id="account-number" name="account-number" required class="formtext1"><br><br>
+
+                            <label for="amount">振込金額</label>
+                                <input type="number" id="amount" name="amount" required class="formtext4">円<br><br>
+
+                            <label for="recipient-name">受取人名</label>
+                                <input type="text" id="recipient-name" name="recipient-name" required class="formtext1">
+                                <br><br>
+                    </div>
+ 
+
+
+                    <!--来店支払-->
+                        <div id="message3" class="hidden">
+                            <h3 class="midasi">来店支払い</h3><br>
+                              <h4>◎来店時にてお支払いください。</h4><br>
+                        </div>
+
+                        
+
+                                <script>
+                                    const select = document.getElementById("select");
+                                    const message1 = document.getElementById("message1");
+                                    const message2 = document.getElementById("message2");
+                                    const message3 = document.getElementById("message3");
+                            
+                                    select.addEventListener("change", (event) => {
+                                    const value = event.target.value;
+                                    message1.classList.toggle("hidden", value !== "1");
+                                    message2.classList.toggle("hidden", value !== "2");
+                                    message3.classList.toggle("hidden", value !== "3");
+                                    });
+
+
+                                </script>
+                                <br><br>    
+            </div>
+                    <button type="submit" form="myform"><a href="transmission.html" class="sousin">送信</a></button>
+            </section>
+
+    </form>
+
+    
+</body>
+
+

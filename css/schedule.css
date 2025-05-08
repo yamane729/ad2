@@ -1,0 +1,242 @@
+@charset "UTF-8";
+h1,div.o dl h2{
+  text-align: center;
+  margin-bottom: 10px;
+}
+body dl dt {
+  float: left;
+  width: 15em;
+  padding-left: 10%;
+}
+
+body div.i dl,body div.u dl {
+  margin: 0;
+}
+body div.x div.i dl dd,body div.m div.u dl dd{
+  padding: 0;
+}
+
+body div.o dl dd {
+  padding-bottom: 10px;
+}
+
+div.o {
+  border: solid 5px #555555;
+  width: 60vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10%;
+  position: relative;
+}
+
+div.i {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0 1.5em 15px;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 16px;
+  background: #FFF;
+  border: solid 3px #555;
+  box-sizing: border-box;
+}
+
+div.i:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -24px;
+  margin-top: -12px;
+  border: 12px solid transparent;
+  border-right: 12px solid #FFF;
+  z-index: 2;
+}
+
+div.i:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  margin-top: -14px;
+  border: 14px solid transparent;
+  border-right: 14px solid #555;
+  z-index: 1;
+}
+
+div.i {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: -8%;
+  left: 60%;
+}
+
+div.u {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0 1.5em 15px;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 16px;
+  background: #FFF;
+  border: solid 3px #555;
+  box-sizing: border-box;
+}
+
+div.u:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -24px;
+  margin-top: -12px;
+  border: 12px solid transparent;
+  border-right: 12px solid #FFF;
+  z-index: 2;
+}
+
+div.u:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  margin-top: -14px;
+  border: 14px solid transparent;
+  border-right: 14px solid #555;
+  z-index: 1;
+}
+
+div.u {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: -20%;
+  left: 60%;
+}
+
+img {
+  width: 25%;
+  height: auto;
+}
+
+div.e {
+  margin: 1em;
+  position: relative; 
+}
+div.e img{
+  position: absolute;
+  right: 10%;
+  top: -100%;
+}
+
+
+div.x{
+position: relative;
+}
+div.x img{
+  position: absolute;
+  left: -20%;
+  top: -50%;
+}
+div.m{
+position: relative;
+}
+div.m img{
+  position: absolute;
+  left: 98%;
+  top: -40%;
+}
+
+
+/* 全体 */
+body {
+  margin: 0;
+  line-height: 1.8;
+  letter-spacing: 1.5px;
+  color: #353538;
+  font-family: "Yuji Syuku", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+a:hover {
+  color: #eda868;
+}
+li {
+  list-style: none;
+  white-space: nowrap;
+  margin: 1% 0 3%;
+  padding: 0 3% 0;
+  border-left: solid #fff;
+  /* 以下サイズ指定 */
+  width: 20%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+li:first-child {
+  border-left: none;
+}
+h1,h2,p {
+  margin: 0;
+}
+
+/* ナビゲーション */
+.nav{
+  background-color: #215ca0;
+}
+.nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  margin: 0 5%;
+}
+
+@media screen and (max-width:959px) {
+  /* モバイル版の表示 */
+body div.o  {
+  width: 65%;
+}
+img{
+  width: 20%;
+  height: auto;
+}
+body div.e{
+  position: relative;
+  padding-left: 0;
+}
+body div.e img{
+  position: absolute;
+  width: 17%;
+  top: -40%;
+  right: -2%;
+}
+div.x{
+  position: relative;
+}
+div.x img{
+  position: absolute;
+  left: -10%;
+  top: -5%;
+}
+div.m{
+  position: relative;
+}
+div.m img{
+  position: absolute;
+  top: 0%;
+  left: 83%;
+}
+div.i,div.u{
+  display: none;
+}
+
+}

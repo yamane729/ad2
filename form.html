@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/shiisa_one.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/ham.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/form.css">
+    <title>沖縄観光 お問い合わせ</title>
+</head>
+<body>
+
+    <!-- ヘッダー -->
+  <header class="header">
+        <nav class="nav nav1">
+          <ul>
+            <li><a href="index.html">トップ</a></li>
+            <li><a href="index.html#osirase">お知らせ</li>
+            <li><a href="schedule.html">旅行プラン</a></li>
+            <li><a href="page.html">お申し込み</a></li>
+            <li><a href="form.html">お問い合わせ</a></li>
+          </ul>
+        </nav>
+      </header>
+    
+    <!-- ハンバーガーメニュー -->
+      <input type="checkbox" id="hambuger">
+        <label for="hambuger">
+          <span class="buger">
+            <span class="bar"></span>
+          </span>
+        </label>
+      <label class="light-dark" for="hambuger"></label>
+      <div id="menu">
+        <a href="index.html">トップ</a>
+        <a href="index.html#osirase">お知らせ</a>
+        <a href="schedule.html">旅行プラン</a>
+        <a href="page.html">お申し込み</a>
+        <a href="form.html">お問い合わせ</a>
+      </div>
+
+    <div class="container">
+        <h1>お問い合わせ</h1>
+        <!-- <form action="program.php" method="post"> -->
+            <dl>
+                <dt>お名前<span class="must">※</span></dt>
+                <dd>
+                    <input type="text" name="name" required placeholder="田中 太郎">
+                </dd>
+                <dt>ふりがな<span class="must">※</span></dt>
+                <dd>
+                    <input type="text" name="kana" required placeholder="たなか たろう">
+                </dd>
+                <dt>メールアドレス<span class="must">※</span></dt>
+                <dd>
+                    <input type="email" name="email" required placeholder="sample@test.com">
+                </dd>
+                <dt>性別</dt>
+                <dd>
+                    <label><input type="radio" name="sex" value="男">男</label>
+                    <label><input type="radio" name="sex" value="女">女</label>
+                </dd>
+    
+                <dt>お問い合わせ・ご質問内容</dt>
+                <dd>
+                    <textarea name="comment" cols="20" rows="5"></textarea>
+                </dd>
+            </dl>
+            <a href="submit.html"><p class="submit"><input type="submit" name="submit" value="送信する"></p></a>
+        <!-- </form> -->
+    </div>
+</body>
+</html>
